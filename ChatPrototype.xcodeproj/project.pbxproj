@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		59A123871D659A5F00CF2F8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123861D659A5F00CF2F8B /* main.m */; };
 		59A1238A1D659A5F00CF2F8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123891D659A5F00CF2F8B /* AppDelegate.m */; };
-		59A1238D1D659A5F00CF2F8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A1238C1D659A5F00CF2F8B /* ViewController.m */; };
 		59A123901D659A5F00CF2F8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A1238E1D659A5F00CF2F8B /* Main.storyboard */; };
 		59A123921D659A5F00CF2F8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A123911D659A5F00CF2F8B /* Assets.xcassets */; };
 		59A123951D659A5F00CF2F8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A123931D659A5F00CF2F8B /* LaunchScreen.storyboard */; };
 		59A123A01D659A5F00CF2F8B /* ChatPrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A1239F1D659A5F00CF2F8B /* ChatPrototypeTests.m */; };
+		59A123B11D659B7E00CF2F8B /* SDCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123B01D659B7E00CF2F8B /* SDCoreDataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +31,6 @@
 		59A123861D659A5F00CF2F8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59A123881D659A5F00CF2F8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59A123891D659A5F00CF2F8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		59A1238B1D659A5F00CF2F8B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		59A1238C1D659A5F00CF2F8B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		59A1238F1D659A5F00CF2F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59A123911D659A5F00CF2F8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59A123941D659A5F00CF2F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +38,8 @@
 		59A1239B1D659A5F00CF2F8B /* ChatPrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatPrototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A1239F1D659A5F00CF2F8B /* ChatPrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatPrototypeTests.m; sourceTree = "<group>"; };
 		59A123A11D659A5F00CF2F8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59A123AF1D659B7E00CF2F8B /* SDCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCoreDataController.h; sourceTree = "<group>"; };
+		59A123B01D659B7E00CF2F8B /* SDCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCoreDataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +81,13 @@
 		59A123841D659A5F00CF2F8B /* ChatPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				59A123B51D659C7900CF2F8B /* ClassCategories */,
+				59A123B41D659BD700CF2F8B /* ViewModels */,
+				59A123B21D659B8F00CF2F8B /* Model */,
+				59A123AB1D659A8400CF2F8B /* Views */,
+				59A123AA1D659A7800CF2F8B /* Managers */,
 				59A123881D659A5F00CF2F8B /* AppDelegate.h */,
 				59A123891D659A5F00CF2F8B /* AppDelegate.m */,
-				59A1238B1D659A5F00CF2F8B /* ViewController.h */,
-				59A1238C1D659A5F00CF2F8B /* ViewController.m */,
 				59A1238E1D659A5F00CF2F8B /* Main.storyboard */,
 				59A123911D659A5F00CF2F8B /* Assets.xcassets */,
 				59A123931D659A5F00CF2F8B /* LaunchScreen.storyboard */,
@@ -109,6 +112,75 @@
 				59A123A11D659A5F00CF2F8B /* Info.plist */,
 			);
 			path = ChatPrototypeTests;
+			sourceTree = "<group>";
+		};
+		59A123AA1D659A7800CF2F8B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				59A123AF1D659B7E00CF2F8B /* SDCoreDataController.h */,
+				59A123B01D659B7E00CF2F8B /* SDCoreDataController.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		59A123AB1D659A8400CF2F8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59A123AE1D659AAC00CF2F8B /* Cells */,
+				59A123AD1D659A9E00CF2F8B /* ViewControllers */,
+				59A123AC1D659A9400CF2F8B /* CustomViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59A123AC1D659A9400CF2F8B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		59A123AD1D659A9E00CF2F8B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		59A123AE1D659AAC00CF2F8B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		59A123B21D659B8F00CF2F8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59A123B31D659BC600CF2F8B /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59A123B31D659BC600CF2F8B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		59A123B41D659BD700CF2F8B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		59A123B51D659C7900CF2F8B /* ClassCategories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClassCategories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59A1238D1D659A5F00CF2F8B /* ViewController.m in Sources */,
 				59A1238A1D659A5F00CF2F8B /* AppDelegate.m in Sources */,
 				59A123871D659A5F00CF2F8B /* main.m in Sources */,
+				59A123B11D659B7E00CF2F8B /* SDCoreDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChatPrototype/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HiveChat.ChatPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChatPrototype/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HiveChat.ChatPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
