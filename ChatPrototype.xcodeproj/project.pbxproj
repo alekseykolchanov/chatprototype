@@ -14,6 +14,23 @@
 		59A123951D659A5F00CF2F8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A123931D659A5F00CF2F8B /* LaunchScreen.storyboard */; };
 		59A123A01D659A5F00CF2F8B /* ChatPrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A1239F1D659A5F00CF2F8B /* ChatPrototypeTests.m */; };
 		59A123B11D659B7E00CF2F8B /* SDCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123B01D659B7E00CF2F8B /* SDCoreDataController.m */; };
+		59A123B81D659D4E00CF2F8B /* chatprototype.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59A123B61D659D4E00CF2F8B /* chatprototype.xcdatamodeld */; };
+		59A123DD1D65A3CA00CF2F8B /* RootEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123CA1D65A3CA00CF2F8B /* RootEntity+CoreDataProperties.m */; };
+		59A123DE1D65A3CA00CF2F8B /* RootEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123CC1D65A3CA00CF2F8B /* RootEntity.m */; };
+		59A123E51D65A71B00CF2F8B /* NSDate+ChatPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123E41D65A71B00CF2F8B /* NSDate+ChatPrototype.m */; };
+		59A123EC1D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123E91D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m */; };
+		59A123ED1D65A97200CF2F8B /* BaseMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123EB1D65A97200CF2F8B /* BaseMessage.m */; };
+		59A123F21D65A99700CF2F8B /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123EF1D65A99700CF2F8B /* User+CoreDataProperties.m */; };
+		59A123F31D65A99700CF2F8B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123F11D65A99700CF2F8B /* User.m */; };
+		59A123FC1D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123F51D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m */; };
+		59A123FD1D65A9DF00CF2F8B /* GeoLocationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123F71D65A9DF00CF2F8B /* GeoLocationMessage.m */; };
+		59A123FE1D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123F91D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.m */; };
+		59A123FF1D65A9DF00CF2F8B /* TextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123FB1D65A9DF00CF2F8B /* TextMessage.m */; };
+		59A124081D65AA0A00CF2F8B /* Image+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A124011D65AA0A00CF2F8B /* Image+CoreDataProperties.m */; };
+		59A124091D65AA0A00CF2F8B /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A124031D65AA0A00CF2F8B /* Image.m */; };
+		59A1240A1D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A124051D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.m */; };
+		59A1240B1D65AA0A00CF2F8B /* ImageMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A124071D65AA0A00CF2F8B /* ImageMessage.m */; };
+		59A1240C1D65AAC900CF2F8B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A123E61D65A7B700CF2F8B /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +57,38 @@
 		59A123A11D659A5F00CF2F8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A123AF1D659B7E00CF2F8B /* SDCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCoreDataController.h; sourceTree = "<group>"; };
 		59A123B01D659B7E00CF2F8B /* SDCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCoreDataController.m; sourceTree = "<group>"; };
+		59A123B71D659D4E00CF2F8B /* chatprototype.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = chatprototype.xcdatamodel; sourceTree = "<group>"; };
+		59A123C91D65A3CA00CF2F8B /* RootEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RootEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		59A123CA1D65A3CA00CF2F8B /* RootEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RootEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		59A123CB1D65A3CA00CF2F8B /* RootEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootEntity.h; sourceTree = "<group>"; };
+		59A123CC1D65A3CA00CF2F8B /* RootEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootEntity.m; sourceTree = "<group>"; };
+		59A123E31D65A71B00CF2F8B /* NSDate+ChatPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ChatPrototype.h"; sourceTree = "<group>"; };
+		59A123E41D65A71B00CF2F8B /* NSDate+ChatPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ChatPrototype.m"; sourceTree = "<group>"; };
+		59A123E61D65A7B700CF2F8B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		59A123E81D65A97200CF2F8B /* BaseMessage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseMessage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		59A123E91D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseMessage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		59A123EA1D65A97200CF2F8B /* BaseMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMessage.h; sourceTree = "<group>"; };
+		59A123EB1D65A97200CF2F8B /* BaseMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMessage.m; sourceTree = "<group>"; };
+		59A123EE1D65A99700CF2F8B /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		59A123EF1D65A99700CF2F8B /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		59A123F01D65A99700CF2F8B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		59A123F11D65A99700CF2F8B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		59A123F41D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoLocationMessage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		59A123F51D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GeoLocationMessage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		59A123F61D65A9DF00CF2F8B /* GeoLocationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoLocationMessage.h; sourceTree = "<group>"; };
+		59A123F71D65A9DF00CF2F8B /* GeoLocationMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoLocationMessage.m; sourceTree = "<group>"; };
+		59A123F81D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TextMessage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		59A123F91D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TextMessage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		59A123FA1D65A9DF00CF2F8B /* TextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMessage.h; sourceTree = "<group>"; };
+		59A123FB1D65A9DF00CF2F8B /* TextMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessage.m; sourceTree = "<group>"; };
+		59A124001D65AA0A00CF2F8B /* Image+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Image+CoreDataProperties.h"; sourceTree = "<group>"; };
+		59A124011D65AA0A00CF2F8B /* Image+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Image+CoreDataProperties.m"; sourceTree = "<group>"; };
+		59A124021D65AA0A00CF2F8B /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		59A124031D65AA0A00CF2F8B /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		59A124041D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImageMessage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		59A124051D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ImageMessage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		59A124061D65AA0A00CF2F8B /* ImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMessage.h; sourceTree = "<group>"; };
+		59A124071D65AA0A00CF2F8B /* ImageMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A1240C1D65AAC900CF2F8B /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +113,7 @@
 		59A123791D659A5E00CF2F8B = {
 			isa = PBXGroup;
 			children = (
+				59A123E61D65A7B700CF2F8B /* CoreData.framework */,
 				59A123841D659A5F00CF2F8B /* ChatPrototype */,
 				59A1239E1D659A5F00CF2F8B /* ChatPrototypeTests */,
 				59A123831D659A5E00CF2F8B /* Products */,
@@ -165,6 +216,35 @@
 		59A123B31D659BC600CF2F8B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				59A123B61D659D4E00CF2F8B /* chatprototype.xcdatamodeld */,
+				59A123C91D65A3CA00CF2F8B /* RootEntity+CoreDataProperties.h */,
+				59A123CA1D65A3CA00CF2F8B /* RootEntity+CoreDataProperties.m */,
+				59A123CB1D65A3CA00CF2F8B /* RootEntity.h */,
+				59A123CC1D65A3CA00CF2F8B /* RootEntity.m */,
+				59A123E81D65A97200CF2F8B /* BaseMessage+CoreDataProperties.h */,
+				59A123E91D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m */,
+				59A123EA1D65A97200CF2F8B /* BaseMessage.h */,
+				59A123EB1D65A97200CF2F8B /* BaseMessage.m */,
+				59A123EE1D65A99700CF2F8B /* User+CoreDataProperties.h */,
+				59A123EF1D65A99700CF2F8B /* User+CoreDataProperties.m */,
+				59A123F01D65A99700CF2F8B /* User.h */,
+				59A123F11D65A99700CF2F8B /* User.m */,
+				59A123F41D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.h */,
+				59A123F51D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m */,
+				59A123F61D65A9DF00CF2F8B /* GeoLocationMessage.h */,
+				59A123F71D65A9DF00CF2F8B /* GeoLocationMessage.m */,
+				59A123F81D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.h */,
+				59A123F91D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.m */,
+				59A123FA1D65A9DF00CF2F8B /* TextMessage.h */,
+				59A123FB1D65A9DF00CF2F8B /* TextMessage.m */,
+				59A124001D65AA0A00CF2F8B /* Image+CoreDataProperties.h */,
+				59A124011D65AA0A00CF2F8B /* Image+CoreDataProperties.m */,
+				59A124021D65AA0A00CF2F8B /* Image.h */,
+				59A124031D65AA0A00CF2F8B /* Image.m */,
+				59A124041D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.h */,
+				59A124051D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.m */,
+				59A124061D65AA0A00CF2F8B /* ImageMessage.h */,
+				59A124071D65AA0A00CF2F8B /* ImageMessage.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -179,6 +259,8 @@
 		59A123B51D659C7900CF2F8B /* ClassCategories */ = {
 			isa = PBXGroup;
 			children = (
+				59A123E31D65A71B00CF2F8B /* NSDate+ChatPrototype.h */,
+				59A123E41D65A71B00CF2F8B /* NSDate+ChatPrototype.m */,
 			);
 			path = ClassCategories;
 			sourceTree = "<group>";
@@ -283,8 +365,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A123F21D65A99700CF2F8B /* User+CoreDataProperties.m in Sources */,
+				59A123FF1D65A9DF00CF2F8B /* TextMessage.m in Sources */,
+				59A123DD1D65A3CA00CF2F8B /* RootEntity+CoreDataProperties.m in Sources */,
+				59A124081D65AA0A00CF2F8B /* Image+CoreDataProperties.m in Sources */,
+				59A123FE1D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.m in Sources */,
+				59A123FC1D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m in Sources */,
+				59A123B81D659D4E00CF2F8B /* chatprototype.xcdatamodeld in Sources */,
+				59A1240B1D65AA0A00CF2F8B /* ImageMessage.m in Sources */,
+				59A123E51D65A71B00CF2F8B /* NSDate+ChatPrototype.m in Sources */,
 				59A1238A1D659A5F00CF2F8B /* AppDelegate.m in Sources */,
+				59A1240A1D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.m in Sources */,
+				59A123EC1D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m in Sources */,
+				59A123F31D65A99700CF2F8B /* User.m in Sources */,
+				59A124091D65AA0A00CF2F8B /* Image.m in Sources */,
+				59A123FD1D65A9DF00CF2F8B /* GeoLocationMessage.m in Sources */,
+				59A123DE1D65A3CA00CF2F8B /* RootEntity.m in Sources */,
 				59A123871D659A5F00CF2F8B /* main.m in Sources */,
+				59A123ED1D65A97200CF2F8B /* BaseMessage.m in Sources */,
 				59A123B11D659B7E00CF2F8B /* SDCoreDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +586,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		59A123B61D659D4E00CF2F8B /* chatprototype.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				59A123B71D659D4E00CF2F8B /* chatprototype.xcdatamodel */,
+			);
+			currentVersion = 59A123B71D659D4E00CF2F8B /* chatprototype.xcdatamodel */;
+			path = chatprototype.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 59A1237A1D659A5E00CF2F8B /* Project object */;
 }

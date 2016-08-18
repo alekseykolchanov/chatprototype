@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Xcode 7.0">
+    <entity name="BaseMessage" representedClassName="BaseMessage" isAbstract="YES" parentEntity="RootEntity" syncable="YES">
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="messagesSent" inverseEntity="User" syncable="YES"/>
+        <relationship name="reciever" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="messagesRecieved" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="GeoLocationMessage" representedClassName="GeoLocationMessage" parentEntity="BaseMessage" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Image" representedClassName="Image" parentEntity="RootEntity" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="imageMessage" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="ImageMessage" inverseName="image" inverseEntity="ImageMessage" syncable="YES"/>
+    </entity>
+    <entity name="ImageMessage" representedClassName="ImageMessage" parentEntity="BaseMessage" syncable="YES">
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Image" inverseName="imageMessage" inverseEntity="Image" syncable="YES"/>
+    </entity>
+    <entity name="RootEntity" representedClassName="RootEntity" isAbstract="YES" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="deleted_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="guid" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="TextMessage" representedClassName="TextMessage" parentEntity="BaseMessage" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" parentEntity="RootEntity" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="messagesRecieved" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BaseMessage" inverseName="reciever" inverseEntity="BaseMessage" syncable="YES"/>
+        <relationship name="messagesSent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BaseMessage" inverseName="owner" inverseEntity="BaseMessage" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="232" positionY="-157" width="128" height="88"/>
+        <element name="RootEntity" positionX="45" positionY="-153" width="128" height="103"/>
+        <element name="BaseMessage" positionX="234" positionY="-279" width="128" height="88"/>
+        <element name="TextMessage" positionX="405" positionY="-396" width="128" height="58"/>
+        <element name="ImageMessage" positionX="405" positionY="-232" width="128" height="58"/>
+        <element name="Image" positionX="412" positionY="-27" width="128" height="73"/>
+        <element name="GeoLocationMessage" positionX="405" positionY="-315" width="128" height="73"/>
+    </elements>
+</model>
