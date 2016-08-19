@@ -31,12 +31,12 @@
         <relationship name="messagesSent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BaseMessage" inverseName="owner" inverseEntity="BaseMessage" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="232" positionY="-157" width="128" height="88"/>
-        <element name="RootEntity" positionX="45" positionY="-153" width="128" height="103"/>
         <element name="BaseMessage" positionX="234" positionY="-279" width="128" height="88"/>
-        <element name="TextMessage" positionX="405" positionY="-396" width="128" height="58"/>
-        <element name="ImageMessage" positionX="405" positionY="-232" width="128" height="58"/>
-        <element name="Image" positionX="412" positionY="-27" width="128" height="73"/>
         <element name="GeoLocationMessage" positionX="405" positionY="-315" width="128" height="73"/>
+        <element name="Image" positionX="412" positionY="-27" width="128" height="73"/>
+        <element name="ImageMessage" positionX="405" positionY="-232" width="128" height="58"/>
+        <element name="RootEntity" positionX="45" positionY="-153" width="128" height="103"/>
+        <element name="TextMessage" positionX="405" positionY="-396" width="128" height="58"/>
+        <element name="User" positionX="232" positionY="-157" width="128" height="88"/>
     </elements>
 </model>

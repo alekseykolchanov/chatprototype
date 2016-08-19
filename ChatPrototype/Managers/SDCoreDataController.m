@@ -7,7 +7,7 @@
 
 #import "SDCoreDataController.h"
 
-NSString *const kDataModelFileName = @"chatprototype";
+NSString *const SDCoreDataControllerDataModelFileName = @"chatprototype";
 
 @interface SDCoreDataController ()
 
@@ -114,7 +114,7 @@ NSString *const kDataModelFileName = @"chatprototype";
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:kDataModelFileName withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:SDCoreDataControllerDataModelFileName withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -127,7 +127,7 @@ NSString *const kDataModelFileName = @"chatprototype";
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent: [NSString stringWithFormat:@"%@.sqlite", kDataModelFileName]];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent: [NSString stringWithFormat:@"%@.sqlite", SDCoreDataControllerDataModelFileName]];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
