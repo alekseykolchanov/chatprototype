@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="232" y="283"/>
         </scene>
-        <!--View Controller-->
+        <!--User List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HCUserListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -73,7 +73,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="85" id="d35-nP-i6z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HCUserFriendTableViewCell" rowHeight="85" id="d35-nP-i6z" customClass="HCUserFriendTableViewCell">
                                         <rect key="frame" x="0.0" y="72" width="600" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d35-nP-i6z" id="6A6-K8-CnD">
@@ -95,10 +95,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="userNameLabel" destination="ydZ-rU-OaA" id="KTA-H1-Xtx"/>
                                             <segue destination="0Nm-D9-3qM" kind="show" id="Boh-id-BsO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6dh-N9-6KJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NaZ-bY-WQO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -110,6 +115,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MW0-nR-mbU"/>
+                    <connections>
+                        <outlet property="tableView" destination="VV8-Ke-kbv" id="hoI-5w-J7L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

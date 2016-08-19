@@ -11,6 +11,7 @@
 #import "HCServerManagerProtocol.h"
 #import "HCServerManager.h"
 
+NSString * const HCStoreManagerUserListDidChangeNotification = @"HCStoreManagerUserListDidChangeNotification";
 
 
 @interface HCStoreManager ()
@@ -49,15 +50,17 @@
 
 #pragma mark - User methods
 - (BOOL)isLoggedIn {
-    if (![[self serverManager] currentUserGuid]) {
-        return NO;
+    
+    NSString *currentGuid = nil;
+    if (!(currentGuid = [[self serverManager] currentUserGuid])) {
+        return nil;
     }
     
     NSManagedObjectContext *objContext = [self currentContext];
     
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"User"];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"guid==%@",[[self serverManager]currentUserGuid]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"guid==%@",currentGuid];
     [fetchRequest setPredicate:predicate];
     
     __block int usersCount;
@@ -72,7 +75,8 @@
 
 - (User *)currentUserInContext:(NSManagedObjectContext *)context {
     
-    if (![[self serverManager] currentUserGuid]) {
+    NSString *currentGuid = nil;
+    if (!(currentGuid = [[self serverManager] currentUserGuid])) {
         return nil;
     }
     
@@ -80,7 +84,7 @@
 
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"User"];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"guid==%@",[[self serverManager]currentUserGuid]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"guid==%@",currentGuid];
     [fetchRequest setPredicate:predicate];
     
     __block NSArray *users;
@@ -117,6 +121,8 @@
                     
 #endif
                     [[self currentContext] save:nil];
+                    
+                    [[NSNotificationCenter defaultCenter] postNotificationName:HCStoreManagerUserListDidChangeNotification object:nil];
                 }];
             }
         }
@@ -125,6 +131,34 @@
             completionBlock(error);
         }
     }];
+}
+
+#pragma mark - User's friends
+- (NSArray *)usersFriendsInContext:(NSManagedObjectContext *)context withSortDescriptors:(NSArray<NSSortDescriptor *> *)sortDescriptorsArray {
+    
+    NSString *currentGuid = nil;
+    if (!(currentGuid = [[self serverManager] currentUserGuid])) {
+        return nil;
+    }
+    
+    NSManagedObjectContext *objContext = context == nil ? [self currentContext] : context;
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"guid != %@",currentGuid];
+    [fetchRequest setPredicate:predicate];
+    
+    [fetchRequest setSortDescriptors:sortDescriptorsArray];
+    
+    __block NSArray *users;
+    
+    [objContext performBlockAndWait:^{
+        NSError *error;
+        users =  [objContext executeFetchRequest:fetchRequest error:&error];
+    }];
+    
+    return users;
+    
 }
 
 #pragma mark - Sending messages
@@ -149,6 +183,8 @@
     
     [[SDCoreDataController sharedInstance] saveBackgroundContext];
     [[SDCoreDataController sharedInstance] saveMasterContext];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:HCStoreManagerUserListDidChangeNotification object:nil];
 }
 
 

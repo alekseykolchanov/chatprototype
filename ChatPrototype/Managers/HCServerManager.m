@@ -58,7 +58,7 @@ NSString *const HCServerManagerCurrentUserGUIDKey = @"HCServerManagerCurrentUser
 }
 
 - (void)loginWithName:(NSString *)name completion:(void(^)(NSDictionary *userDictionary, NSError *error))completionBlock {
-    dispatch_queue_t queue = dispatch_queue_create("testQueue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), queue, ^{
             if (completionBlock) {

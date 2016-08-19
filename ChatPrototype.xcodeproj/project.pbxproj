@@ -41,6 +41,8 @@
 		59A124241D65DA3500CF2F8B /* HCLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A124231D65DA3500CF2F8B /* HCLoginViewModel.m */; };
 		59F1AF621D670A38009E7FCB /* HCMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF611D670A38009E7FCB /* HCMainViewModel.m */; };
 		59F1AF671D6719A8009E7FCB /* HCUserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF661D6719A8009E7FCB /* HCUserListViewModel.m */; };
+		59F1AF6B1D679767009E7FCB /* NSIndexPath+ChatPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF6A1D679767009E7FCB /* NSIndexPath+ChatPrototype.m */; };
+		59F1AF6E1D679C26009E7FCB /* HCUserFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF6D1D679C26009E7FCB /* HCUserFriendTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,11 @@
 		59F1AF611D670A38009E7FCB /* HCMainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMainViewModel.m; sourceTree = "<group>"; };
 		59F1AF651D6719A8009E7FCB /* HCUserListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUserListViewModel.h; sourceTree = "<group>"; };
 		59F1AF661D6719A8009E7FCB /* HCUserListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUserListViewModel.m; sourceTree = "<group>"; };
+		59F1AF681D678F95009E7FCB /* HCViewModelTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCViewModelTableViewDataSource.h; sourceTree = "<group>"; };
+		59F1AF691D679767009E7FCB /* NSIndexPath+ChatPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+ChatPrototype.h"; sourceTree = "<group>"; };
+		59F1AF6A1D679767009E7FCB /* NSIndexPath+ChatPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+ChatPrototype.m"; sourceTree = "<group>"; };
+		59F1AF6C1D679C26009E7FCB /* HCUserFriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUserFriendTableViewCell.h; sourceTree = "<group>"; };
+		59F1AF6D1D679C26009E7FCB /* HCUserFriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUserFriendTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +253,8 @@
 		59A123AE1D659AAC00CF2F8B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				59F1AF6C1D679C26009E7FCB /* HCUserFriendTableViewCell.h */,
+				59F1AF6D1D679C26009E7FCB /* HCUserFriendTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -298,6 +307,7 @@
 		59A123B41D659BD700CF2F8B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				59F1AF681D678F95009E7FCB /* HCViewModelTableViewDataSource.h */,
 				59F1AF601D670A38009E7FCB /* HCMainViewModel.h */,
 				59F1AF611D670A38009E7FCB /* HCMainViewModel.m */,
 				59A124221D65DA3500CF2F8B /* HCLoginViewModel.h */,
@@ -315,6 +325,8 @@
 				59A123E41D65A71B00CF2F8B /* NSDate+ChatPrototype.m */,
 				59A1241F1D65D63400CF2F8B /* UITextField+ChatPrototype.h */,
 				59A124201D65D63400CF2F8B /* UITextField+ChatPrototype.m */,
+				59F1AF691D679767009E7FCB /* NSIndexPath+ChatPrototype.h */,
+				59F1AF6A1D679767009E7FCB /* NSIndexPath+ChatPrototype.m */,
 			);
 			path = ClassCategories;
 			sourceTree = "<group>";
@@ -437,8 +449,10 @@
 				59A1238A1D659A5F00CF2F8B /* AppDelegate.m in Sources */,
 				59A1240A1D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.m in Sources */,
 				59A123EC1D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m in Sources */,
+				59F1AF6E1D679C26009E7FCB /* HCUserFriendTableViewCell.m in Sources */,
 				59A123F31D65A99700CF2F8B /* User.m in Sources */,
 				59A124181D65C8A900CF2F8B /* HCBaseViewController.m in Sources */,
+				59F1AF6B1D679767009E7FCB /* NSIndexPath+ChatPrototype.m in Sources */,
 				59A124091D65AA0A00CF2F8B /* Image.m in Sources */,
 				59A124241D65DA3500CF2F8B /* HCLoginViewModel.m in Sources */,
 				59A123FD1D65A9DF00CF2F8B /* GeoLocationMessage.m in Sources */,
