@@ -10,6 +10,8 @@
 
 @interface NSIndexPath (ChatPrototype)
 
-- (NSInteger)tableViewSection;
-- (NSInteger)tableViewItem;
+- (instancetype)initWithTableViewSection:(NSUInteger)section andItem:(NSUInteger)item;
+
+- (NSUInteger)tableViewSection;
+- (NSUInteger)tableViewItem;
 @end

@@ -27,7 +27,7 @@
     </entity>
     <entity name="User" representedClassName="User" parentEntity="RootEntity" syncable="YES">
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="messagesRecieved" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BaseMessage" inverseName="reciever" inverseEntity="BaseMessage" syncable="YES"/>
+        <relationship name="messagesRecieved" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BaseMessage" inverseName="reciever" inverseEntity="BaseMessage" syncable="YES"/>
         <relationship name="messagesSent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BaseMessage" inverseName="owner" inverseEntity="BaseMessage" syncable="YES"/>
     </entity>
     <elements>

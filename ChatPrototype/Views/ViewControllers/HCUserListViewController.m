@@ -9,9 +9,11 @@
 #import "HCUserListViewController.h"
 #import "HCUserListViewModel.h"
 #import "HCUserFriendTableViewCell.h"
+#import "HCChatViewController.h"
 
 NSString * const HCUserFriendTableViewCellIdentifier = @"HCUserFriendTableViewCell";
 
+NSString * const HCUserListToChatSegueIdentifier = @"HCUserListToChatSegue";
 
 @interface HCUserListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -40,11 +42,31 @@ NSString * const HCUserFriendTableViewCellIdentifier = @"HCUserFriendTableViewCe
     
     __weak typeof(self) weakSelf = self;
     [vm setItemsCollectionDidChangeBlock:^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [[weakSelf tableView] reloadData];
-        });
+        [[weakSelf tableView] reloadData];
     }];
     
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:HCUserListToChatSegueIdentifier]) {
+        [(HCChatViewController *)[segue destinationViewController] setFriendGuid: [self selectedCellUserGuid]];
+    }
+    
+}
+
+- (NSString *)selectedCellUserGuid {
+    NSIndexPath *selectedIP = [[self tableView]indexPathForSelectedRow];
+    if (!selectedIP){
+        return nil;
+    }
+    
+    return [[[self viewModel] itemAtIndexPath:selectedIP] guid];
 }
 
 #pragma mark - UITableViewDataSource
@@ -71,6 +93,7 @@ NSString * const HCUserFriendTableViewCellIdentifier = @"HCUserFriendTableViewCe
             break;
     }
     
+    NSAssert(false, @"Friend entity wasn't identified");
     return [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 }
 

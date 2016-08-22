@@ -20,7 +20,7 @@
 
 @interface HCUserListViewModel ()
 
-@property (nonatomic, strong) NSManagedObjectContext *currentContext;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, strong) NSArray *usersArray;
 @property (nonatomic, strong) NSArray *userEntitiesArray;
@@ -29,7 +29,7 @@
 @end
 
 @implementation HCUserListViewModel
-@synthesize currentContext = _currentContext;
+@synthesize managedObjectContext = _managedObjectContext;
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -40,11 +40,11 @@
 }
 
 - (NSManagedObjectContext *)currentContext {
-    if (!_currentContext) {
-        _currentContext = [[SDCoreDataController sharedInstance] newManagedObjectContext];
+    if (!_managedObjectContext) {
+        _managedObjectContext = [[SDCoreDataController sharedInstance] newManagedObjectContext];
     }
     
-    return _currentContext;
+    return _managedObjectContext;
 }
 
 - (void)dealloc {
@@ -52,33 +52,36 @@
 }
 
 - (void)userListDidChange:(NSNotification *)notification {
-    [self updateUsersArray];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self updateUsersArray];
+    });
 }
 
 - (void)updateUsersArray {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSSortDescriptor *nameSortDesrciptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES];
-        NSArray *userFriends = [[HCStoreManager sharedInstance] usersFriendsInContext:[self currentContext] withSortDescriptors:@[nameSortDesrciptor]];
-        
-        NSMutableArray *entitiesArray = [[NSMutableArray alloc] initWithCapacity:[userFriends count]];
-        for (User *friend in userFriends) {
-            HCUserFriendEntity *friendEntity = [HCUserFriendEntity new];
-            [friendEntity setName:[friend firstName]];
-            [entitiesArray addObject:friendEntity];
-        }
-        [self setUsersArray:userFriends];
-        [self setUserEntitiesArray:entitiesArray];
-        
-        HCViewModelTableViewDataSourceDidChangeBlock didChangeBlock = [self itemsCollectionDidChangeBlock];
-        if (didChangeBlock) {
-            didChangeBlock();
-        }
-    });
+    NSSortDescriptor *nameSortDesrciptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES];
+    NSArray *userFriends = [[HCStoreManager sharedInstance] usersFriendsInContext:[self currentContext] withSortDescriptors:@[nameSortDesrciptor]];
+    
+    NSMutableArray *entitiesArray = [[NSMutableArray alloc] initWithCapacity:[userFriends count]];
+    for (User *friend in userFriends) {
+        HCUserFriendEntity *friendEntity = [HCUserFriendEntity new];
+        [friendEntity setGuid:[friend guid]];
+        [friendEntity setName:[friend firstName]];
+        [entitiesArray addObject:friendEntity];
+    }
+    [self setUsersArray:userFriends];
+    [self setUserEntitiesArray:entitiesArray];
+    
+    HCViewModelTableViewDataSourceDidChangeBlock didChangeBlock = [self itemsCollectionDidChangeBlock];
+    if (didChangeBlock) {
+        didChangeBlock();
+    }
 }
 
 #pragma mark - HCUserListViewModelProtocol
 - (void)reloadItemsCollection {
-    [self updateUsersArray];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self updateUsersArray];
+    });
 }
 
 - (NSInteger)numberOfSections {

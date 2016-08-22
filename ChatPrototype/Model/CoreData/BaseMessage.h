@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RootEntity.h"
+#import "HCModelSupport.h"
 
 @class User;
 
@@ -16,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BaseMessage : RootEntity
 
 // Insert code here to declare functionality of your managed object subclass
+
+@property (nonatomic) HCMessageStatus messageStatus;
 
 @end
 

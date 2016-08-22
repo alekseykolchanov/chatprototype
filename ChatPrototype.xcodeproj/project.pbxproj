@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		590272741D66E412000C5D1A /* HCUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 590272731D66E412000C5D1A /* HCUserListViewController.m */; };
+		592AFBD31D68C96300DD9B3A /* HCBaseMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 592AFBD21D68C96300DD9B3A /* HCBaseMessageTableViewCell.m */; };
+		592AFBD61D68C97F00DD9B3A /* HCTextMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 592AFBD51D68C97F00DD9B3A /* HCTextMessageTableViewCell.m */; };
+		592AFBD91D68C9C800DD9B3A /* HCDateTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 592AFBD81D68C9C800DD9B3A /* HCDateTimeTableViewCell.m */; };
 		59A123871D659A5F00CF2F8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123861D659A5F00CF2F8B /* main.m */; };
 		59A1238A1D659A5F00CF2F8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123891D659A5F00CF2F8B /* AppDelegate.m */; };
 		59A123901D659A5F00CF2F8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A1238E1D659A5F00CF2F8B /* Main.storyboard */; };
@@ -21,8 +24,6 @@
 		59A123E51D65A71B00CF2F8B /* NSDate+ChatPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123E41D65A71B00CF2F8B /* NSDate+ChatPrototype.m */; };
 		59A123EC1D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123E91D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m */; };
 		59A123ED1D65A97200CF2F8B /* BaseMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123EB1D65A97200CF2F8B /* BaseMessage.m */; };
-		59A123F21D65A99700CF2F8B /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123EF1D65A99700CF2F8B /* User+CoreDataProperties.m */; };
-		59A123F31D65A99700CF2F8B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123F11D65A99700CF2F8B /* User.m */; };
 		59A123FC1D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123F51D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m */; };
 		59A123FD1D65A9DF00CF2F8B /* GeoLocationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123F71D65A9DF00CF2F8B /* GeoLocationMessage.m */; };
 		59A123FE1D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A123F91D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.m */; };
@@ -39,10 +40,18 @@
 		59A1241E1D65CB6100CF2F8B /* HCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A1241D1D65CB6100CF2F8B /* HCLoginViewController.m */; };
 		59A124211D65D63400CF2F8B /* UITextField+ChatPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A124201D65D63400CF2F8B /* UITextField+ChatPrototype.m */; };
 		59A124241D65DA3500CF2F8B /* HCLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A124231D65DA3500CF2F8B /* HCLoginViewModel.m */; };
+		59AC2DE01D69B50E002C6521 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC2DDD1D69B50E002C6521 /* User+CoreDataProperties.m */; };
+		59AC2DE11D69B50E002C6521 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC2DDF1D69B50E002C6521 /* User.m */; };
+		59AC2DE81D6A1655002C6521 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AC2DE71D6A1655002C6521 /* Images.xcassets */; };
+		59AC2DEB1D6AAD1B002C6521 /* HCChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC2DEA1D6AAD1B002C6521 /* HCChatInputView.m */; };
+		59AC2DEE1D6AF6E6002C6521 /* HCInverseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC2DED1D6AF6E6002C6521 /* HCInverseTableView.m */; };
 		59F1AF621D670A38009E7FCB /* HCMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF611D670A38009E7FCB /* HCMainViewModel.m */; };
 		59F1AF671D6719A8009E7FCB /* HCUserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF661D6719A8009E7FCB /* HCUserListViewModel.m */; };
 		59F1AF6B1D679767009E7FCB /* NSIndexPath+ChatPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF6A1D679767009E7FCB /* NSIndexPath+ChatPrototype.m */; };
 		59F1AF6E1D679C26009E7FCB /* HCUserFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF6D1D679C26009E7FCB /* HCUserFriendTableViewCell.m */; };
+		59F1AF711D6841AA009E7FCB /* HCChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF701D6841AA009E7FCB /* HCChatViewController.m */; };
+		59F1AF741D6841C3009E7FCB /* HCChatViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF731D6841C3009E7FCB /* HCChatViewModel.m */; };
+		59F1AF771D6843EF009E7FCB /* HCModelSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF761D6843EF009E7FCB /* HCModelSupport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +68,12 @@
 		590272721D66E412000C5D1A /* HCUserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUserListViewController.h; sourceTree = "<group>"; };
 		590272731D66E412000C5D1A /* HCUserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUserListViewController.m; sourceTree = "<group>"; };
 		590272751D66E734000C5D1A /* HCCoreDataModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCoreDataModels.h; sourceTree = "<group>"; };
+		592AFBD11D68C96300DD9B3A /* HCBaseMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBaseMessageTableViewCell.h; sourceTree = "<group>"; };
+		592AFBD21D68C96300DD9B3A /* HCBaseMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBaseMessageTableViewCell.m; sourceTree = "<group>"; };
+		592AFBD41D68C97F00DD9B3A /* HCTextMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTextMessageTableViewCell.h; sourceTree = "<group>"; };
+		592AFBD51D68C97F00DD9B3A /* HCTextMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTextMessageTableViewCell.m; sourceTree = "<group>"; };
+		592AFBD71D68C9C800DD9B3A /* HCDateTimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDateTimeTableViewCell.h; sourceTree = "<group>"; };
+		592AFBD81D68C9C800DD9B3A /* HCDateTimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = HCDateTimeTableViewCell.m; sourceTree = "<group>"; };
 		59A123821D659A5E00CF2F8B /* ChatPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A123861D659A5F00CF2F8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59A123881D659A5F00CF2F8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,10 +99,6 @@
 		59A123E91D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseMessage+CoreDataProperties.m"; sourceTree = "<group>"; };
 		59A123EA1D65A97200CF2F8B /* BaseMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMessage.h; sourceTree = "<group>"; };
 		59A123EB1D65A97200CF2F8B /* BaseMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMessage.m; sourceTree = "<group>"; };
-		59A123EE1D65A99700CF2F8B /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
-		59A123EF1D65A99700CF2F8B /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
-		59A123F01D65A99700CF2F8B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		59A123F11D65A99700CF2F8B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		59A123F41D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoLocationMessage+CoreDataProperties.h"; sourceTree = "<group>"; };
 		59A123F51D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GeoLocationMessage+CoreDataProperties.m"; sourceTree = "<group>"; };
 		59A123F61D65A9DF00CF2F8B /* GeoLocationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoLocationMessage.h; sourceTree = "<group>"; };
@@ -118,6 +129,15 @@
 		59A124201D65D63400CF2F8B /* UITextField+ChatPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ChatPrototype.m"; sourceTree = "<group>"; };
 		59A124221D65DA3500CF2F8B /* HCLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCLoginViewModel.h; sourceTree = "<group>"; };
 		59A124231D65DA3500CF2F8B /* HCLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCLoginViewModel.m; sourceTree = "<group>"; };
+		59AC2DDC1D69B50E002C6521 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		59AC2DDD1D69B50E002C6521 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		59AC2DDE1D69B50E002C6521 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		59AC2DDF1D69B50E002C6521 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		59AC2DE71D6A1655002C6521 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		59AC2DE91D6AAD1B002C6521 /* HCChatInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCChatInputView.h; sourceTree = "<group>"; };
+		59AC2DEA1D6AAD1B002C6521 /* HCChatInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCChatInputView.m; sourceTree = "<group>"; };
+		59AC2DEC1D6AF6E6002C6521 /* HCInverseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCInverseTableView.h; sourceTree = "<group>"; };
+		59AC2DED1D6AF6E6002C6521 /* HCInverseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCInverseTableView.m; sourceTree = "<group>"; };
 		59F1AF5F1D6706C1009E7FCB /* HCServerManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCServerManagerProtocol.h; sourceTree = "<group>"; };
 		59F1AF601D670A38009E7FCB /* HCMainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMainViewModel.h; sourceTree = "<group>"; };
 		59F1AF611D670A38009E7FCB /* HCMainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMainViewModel.m; sourceTree = "<group>"; };
@@ -128,6 +148,12 @@
 		59F1AF6A1D679767009E7FCB /* NSIndexPath+ChatPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+ChatPrototype.m"; sourceTree = "<group>"; };
 		59F1AF6C1D679C26009E7FCB /* HCUserFriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUserFriendTableViewCell.h; sourceTree = "<group>"; };
 		59F1AF6D1D679C26009E7FCB /* HCUserFriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCUserFriendTableViewCell.m; sourceTree = "<group>"; };
+		59F1AF6F1D6841AA009E7FCB /* HCChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCChatViewController.h; sourceTree = "<group>"; };
+		59F1AF701D6841AA009E7FCB /* HCChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCChatViewController.m; sourceTree = "<group>"; };
+		59F1AF721D6841C3009E7FCB /* HCChatViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCChatViewModel.h; sourceTree = "<group>"; };
+		59F1AF731D6841C3009E7FCB /* HCChatViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCChatViewModel.m; sourceTree = "<group>"; };
+		59F1AF751D6843EF009E7FCB /* HCModelSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCModelSupport.h; sourceTree = "<group>"; };
+		59F1AF761D6843EF009E7FCB /* HCModelSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCModelSupport.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +175,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592AFBD01D68C94A00DD9B3A /* MessageCells */ = {
+			isa = PBXGroup;
+			children = (
+				592AFBD11D68C96300DD9B3A /* HCBaseMessageTableViewCell.h */,
+				592AFBD21D68C96300DD9B3A /* HCBaseMessageTableViewCell.m */,
+				592AFBD41D68C97F00DD9B3A /* HCTextMessageTableViewCell.h */,
+				592AFBD51D68C97F00DD9B3A /* HCTextMessageTableViewCell.m */,
+			);
+			name = MessageCells;
+			sourceTree = "<group>";
+		};
 		59A123791D659A5E00CF2F8B = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +208,7 @@
 		59A123841D659A5F00CF2F8B /* ChatPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				59AC2DE21D6A1643002C6521 /* Resources */,
 				59A123B51D659C7900CF2F8B /* ClassCategories */,
 				59A123B41D659BD700CF2F8B /* ViewModels */,
 				59A123B21D659B8F00CF2F8B /* Model */,
@@ -231,6 +269,10 @@
 		59A123AC1D659A9400CF2F8B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				59AC2DE91D6AAD1B002C6521 /* HCChatInputView.h */,
+				59AC2DEA1D6AAD1B002C6521 /* HCChatInputView.m */,
+				59AC2DEC1D6AF6E6002C6521 /* HCInverseTableView.h */,
+				59AC2DED1D6AF6E6002C6521 /* HCInverseTableView.m */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -246,6 +288,8 @@
 				59A1241D1D65CB6100CF2F8B /* HCLoginViewController.m */,
 				590272721D66E412000C5D1A /* HCUserListViewController.h */,
 				590272731D66E412000C5D1A /* HCUserListViewController.m */,
+				59F1AF6F1D6841AA009E7FCB /* HCChatViewController.h */,
+				59F1AF701D6841AA009E7FCB /* HCChatViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -253,8 +297,11 @@
 		59A123AE1D659AAC00CF2F8B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				592AFBD01D68C94A00DD9B3A /* MessageCells */,
 				59F1AF6C1D679C26009E7FCB /* HCUserFriendTableViewCell.h */,
 				59F1AF6D1D679C26009E7FCB /* HCUserFriendTableViewCell.m */,
+				592AFBD71D68C9C800DD9B3A /* HCDateTimeTableViewCell.h */,
+				592AFBD81D68C9C800DD9B3A /* HCDateTimeTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -263,6 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				59A123B31D659BC600CF2F8B /* CoreData */,
+				59F1AF751D6843EF009E7FCB /* HCModelSupport.h */,
+				59F1AF761D6843EF009E7FCB /* HCModelSupport.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,10 +329,10 @@
 				59A123E91D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m */,
 				59A123EA1D65A97200CF2F8B /* BaseMessage.h */,
 				59A123EB1D65A97200CF2F8B /* BaseMessage.m */,
-				59A123EE1D65A99700CF2F8B /* User+CoreDataProperties.h */,
-				59A123EF1D65A99700CF2F8B /* User+CoreDataProperties.m */,
-				59A123F01D65A99700CF2F8B /* User.h */,
-				59A123F11D65A99700CF2F8B /* User.m */,
+				59AC2DDC1D69B50E002C6521 /* User+CoreDataProperties.h */,
+				59AC2DDD1D69B50E002C6521 /* User+CoreDataProperties.m */,
+				59AC2DDE1D69B50E002C6521 /* User.h */,
+				59AC2DDF1D69B50E002C6521 /* User.m */,
 				59A123F41D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.h */,
 				59A123F51D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m */,
 				59A123F61D65A9DF00CF2F8B /* GeoLocationMessage.h */,
@@ -314,6 +363,8 @@
 				59A124231D65DA3500CF2F8B /* HCLoginViewModel.m */,
 				59F1AF651D6719A8009E7FCB /* HCUserListViewModel.h */,
 				59F1AF661D6719A8009E7FCB /* HCUserListViewModel.m */,
+				59F1AF721D6841C3009E7FCB /* HCChatViewModel.h */,
+				59F1AF731D6841C3009E7FCB /* HCChatViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -329,6 +380,14 @@
 				59F1AF6A1D679767009E7FCB /* NSIndexPath+ChatPrototype.m */,
 			);
 			path = ClassCategories;
+			sourceTree = "<group>";
+		};
+		59AC2DE21D6A1643002C6521 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59AC2DE71D6A1655002C6521 /* Images.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +440,7 @@
 				TargetAttributes = {
 					59A123811D659A5E00CF2F8B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KN77JJ2EVX;
 					};
 					59A1239A1D659A5F00CF2F8B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -414,6 +474,7 @@
 			files = (
 				59A123951D659A5F00CF2F8B /* LaunchScreen.storyboard in Resources */,
 				59A123921D659A5F00CF2F8B /* Assets.xcassets in Resources */,
+				59AC2DE81D6A1655002C6521 /* Images.xcassets in Resources */,
 				59A123901D659A5F00CF2F8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,10 +493,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59A123F21D65A99700CF2F8B /* User+CoreDataProperties.m in Sources */,
 				59F1AF671D6719A8009E7FCB /* HCUserListViewModel.m in Sources */,
 				59A123FF1D65A9DF00CF2F8B /* TextMessage.m in Sources */,
 				59A123DD1D65A3CA00CF2F8B /* RootEntity+CoreDataProperties.m in Sources */,
+				592AFBD31D68C96300DD9B3A /* HCBaseMessageTableViewCell.m in Sources */,
 				590272741D66E412000C5D1A /* HCUserListViewController.m in Sources */,
 				59A124081D65AA0A00CF2F8B /* Image+CoreDataProperties.m in Sources */,
 				59A1241B1D65C8CD00CF2F8B /* HCMainViewController.m in Sources */,
@@ -449,17 +510,25 @@
 				59A1238A1D659A5F00CF2F8B /* AppDelegate.m in Sources */,
 				59A1240A1D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.m in Sources */,
 				59A123EC1D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m in Sources */,
+				59AC2DE01D69B50E002C6521 /* User+CoreDataProperties.m in Sources */,
+				592AFBD61D68C97F00DD9B3A /* HCTextMessageTableViewCell.m in Sources */,
 				59F1AF6E1D679C26009E7FCB /* HCUserFriendTableViewCell.m in Sources */,
-				59A123F31D65A99700CF2F8B /* User.m in Sources */,
 				59A124181D65C8A900CF2F8B /* HCBaseViewController.m in Sources */,
 				59F1AF6B1D679767009E7FCB /* NSIndexPath+ChatPrototype.m in Sources */,
 				59A124091D65AA0A00CF2F8B /* Image.m in Sources */,
 				59A124241D65DA3500CF2F8B /* HCLoginViewModel.m in Sources */,
 				59A123FD1D65A9DF00CF2F8B /* GeoLocationMessage.m in Sources */,
 				59A123DE1D65A3CA00CF2F8B /* RootEntity.m in Sources */,
+				59F1AF741D6841C3009E7FCB /* HCChatViewModel.m in Sources */,
 				59A123871D659A5F00CF2F8B /* main.m in Sources */,
 				59A123ED1D65A97200CF2F8B /* BaseMessage.m in Sources */,
+				592AFBD91D68C9C800DD9B3A /* HCDateTimeTableViewCell.m in Sources */,
+				59F1AF771D6843EF009E7FCB /* HCModelSupport.m in Sources */,
+				59AC2DEE1D6AF6E6002C6521 /* HCInverseTableView.m in Sources */,
+				59F1AF711D6841AA009E7FCB /* HCChatViewController.m in Sources */,
+				59AC2DEB1D6AAD1B002C6521 /* HCChatInputView.m in Sources */,
 				59A1241E1D65CB6100CF2F8B /* HCLoginViewController.m in Sources */,
+				59AC2DE11D69B50E002C6521 /* User.m in Sources */,
 				59A123B11D659B7E00CF2F8B /* SDCoreDataController.m in Sources */,
 				59A124151D65AD1A00CF2F8B /* HCStoreManager.m in Sources */,
 				59A124211D65D63400CF2F8B /* UITextField+ChatPrototype.m in Sources */,
@@ -592,11 +661,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChatPrototype/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HiveChat.ChatPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -605,11 +677,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChatPrototype/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HiveChat.ChatPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

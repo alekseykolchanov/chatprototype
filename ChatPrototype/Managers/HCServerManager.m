@@ -8,6 +8,7 @@
 
 #import "HCServerManager.h"
 
+
 NSString *const HCServerManagerDidChangeLoginStateNotification = @"HCServerManagerDidChangeLoginStateNotification";
 
 NSString *const HCServerManagerCurrentUserGUIDKey = @"HCServerManagerCurrentUserGUIDKey";
@@ -60,7 +61,7 @@ NSString *const HCServerManagerCurrentUserGUIDKey = @"HCServerManagerCurrentUser
 - (void)loginWithName:(NSString *)name completion:(void(^)(NSDictionary *userDictionary, NSError *error))completionBlock {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), queue, ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), queue, ^{
             if (completionBlock) {
                 NSString *userGuid = [[NSUUID UUID] UUIDString];
                 NSDictionary *userDictionary = @{HCServerManagerUserGuidParseKey : userGuid,
@@ -71,6 +72,24 @@ NSString *const HCServerManagerCurrentUserGUIDKey = @"HCServerManagerCurrentUser
             }
         });
 
+}
+
+- (void)sendMessageWithDictionary:(NSDictionary *)messageDictionary completion:(void(^)(NSDictionary *messageDictionary, NSError *error))completionBlock {
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), queue, ^{
+        NSMutableDictionary *messageDictionary = [NSMutableDictionary new];
+        if (completionBlock) {
+            
+            completionBlock(messageDictionary, nil);
+        }
+    });
+    
+}
+
+- (void)cleanStorage {
+    [self setCurrentUserGuid:nil];
 }
 
 

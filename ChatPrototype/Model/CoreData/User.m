@@ -2,7 +2,7 @@
 //  User.m
 //  ChatPrototype
 //
-//  Created by Aleksei Kolchanov on 18/08/16.
+//  Created by Aleksei Kolchanov on 21/08/16.
 //  Copyright © 2016 AlKol. All rights reserved.
 //
 

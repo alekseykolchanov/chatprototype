@@ -10,12 +10,20 @@
 
 @implementation NSIndexPath (ChatPrototype)
 
-- (NSInteger)tableViewSection {
+- (instancetype)initWithTableViewSection:(NSUInteger)section andItem:(NSUInteger)item {
+    NSUInteger indexes[] = {section, item};
+    if (self = [self initWithIndexes:indexes length:2]) {
+        
+    }
+    return self;
+}
+
+- (NSUInteger)tableViewSection {
     
     return [self indexAtPosition:0];
 }
 
-- (NSInteger)tableViewItem {
+- (NSUInteger)tableViewItem {
     if ([self length] > 0) {
         return [self indexAtPosition:1];
     }else{

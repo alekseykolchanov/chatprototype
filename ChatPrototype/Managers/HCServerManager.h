@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "HCServerManagerProtocol.h"
 
+
 @interface HCServerManager : NSObject<HCServerManagerProtocol>
 
 @property (nonatomic, readonly) NSString *currentUserGuid;

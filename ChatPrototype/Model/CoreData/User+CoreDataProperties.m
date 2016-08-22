@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.m
 //  ChatPrototype
 //
-//  Created by Aleksei Kolchanov on 18/08/16.
+//  Created by Aleksei Kolchanov on 21/08/16.
 //  Copyright © 2016 AlKol. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,7 +14,7 @@
 @implementation User (CoreDataProperties)
 
 @dynamic firstName;
-@dynamic messagesSent;
 @dynamic messagesRecieved;
+@dynamic messagesSent;
 
 @end

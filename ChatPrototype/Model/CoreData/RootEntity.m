@@ -14,7 +14,9 @@
 // Insert code here to add functionality to your managed object subclass
 
 - (void)awakeFromInsert {
+    self.guid = [[NSUUID UUID] UUIDString];
     self.created_at = [NSDate currentDateTime];
+    self.updated_at = self.created_at;
 }
 
 @end

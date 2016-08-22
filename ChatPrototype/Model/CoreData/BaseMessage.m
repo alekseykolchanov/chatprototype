@@ -11,6 +11,24 @@
 
 @implementation BaseMessage
 
+@dynamic messageStatus;
+
+- (HCMessageStatus)messageStatus {
+    if (![self status]) {
+        return HCMessageStatusUnknown;
+    }
+    
+    return [[self status] unsignedIntegerValue];
+}
+
+- (void)setMessageStatus:(HCMessageStatus)messageStatus {
+    if (messageStatus == HCMessageStatusUnknown) {
+        [self setStatus:nil];
+    }else{
+        [self setStatus:@(messageStatus)];
+    }
+}
+
 // Insert code here to add functionality to your managed object subclass
 
 @end
