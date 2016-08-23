@@ -11,12 +11,18 @@
 #import "HCDateTimeTableViewCell.h"
 #import "HCTextMessageTableViewCell.h"
 #import "HCChatInputView.h"
+#import "HCSelectMapViewController.h"
 
 NSString * const HCChatDateTimeTableViewCellIdentifier = @"HCDateTimeTableViewCell";
 NSString * const HCChatRecievedTextMessageTableViewCellIdentifier = @"HCRecievedTextMessageTableViewCell";
 NSString * const HCChatSentTextMessageTableViewCellIdentifier =@"HCSentTextMessageTableViewCell";
+NSString * const HCChatRecievedImageMessageTableViewCellIdentifier = @"HCRecievedImageMessageTableViewCell";
+NSString * const HCChatSentImageMessageTableViewCellIdentifier =@"HCSentImageMessageTableViewCell";
 
-@interface HCChatViewController ()<UITableViewDataSource, UITableViewDelegate, UITextViewDelegate>
+NSString * const HCChatSelectGPSSegueIdentifier = @"HCChatSelectGPSSegue";
+NSString * const HCChatShowGPSOnMapSegueIdentifier = @"HCShowMapSegue";
+
+@interface HCChatViewController ()<UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, HCSelectMapViewControllerDelegate, HCMessageCellDelegate>
 
 @property (nonatomic, strong) id<HCChatViewModelProtocol> viewModel;
 
@@ -81,6 +87,7 @@ NSString * const HCChatSentTextMessageTableViewCellIdentifier =@"HCSentTextMessa
     [self setupViewModel];
     [self setupViewsAppearance];
     
+    [[[self chatInputView] attachButton] addTarget:self action:@selector(attachButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
     [[[self chatInputView] sendButton] addTarget:self action:@selector(sendButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
     
     [[self viewModel] reloadItemsCollection];
@@ -145,6 +152,21 @@ NSString * const HCChatSentTextMessageTableViewCellIdentifier =@"HCSentTextMessa
     return _receivedBubbleImage;
 }
 
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:HCChatSelectGPSSegueIdentifier]) {
+        UINavigationController *navVC = [segue destinationViewController];
+        HCSelectMapViewController *mapViewController = [navVC viewControllers][0];
+        [mapViewController setDelegate:self];
+    }
+    
+}
+
 #pragma mark - Views setup
 - (void)setupViewsAppearance {
     
@@ -187,6 +209,31 @@ NSString * const HCChatSentTextMessageTableViewCellIdentifier =@"HCSentTextMessa
     }
 }
 
+-(void)attachButtonDidTap:(id)sender {
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    __weak typeof(self) weakSelf = self;
+    UIAlertAction *gpsAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Share location", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    
+        [weakSelf dismissViewControllerAnimated:NO completion:^{
+            
+        }];
+        [weakSelf performSegueWithIdentifier:HCChatSelectGPSSegueIdentifier sender:weakSelf];
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }];
+    
+    [ac addAction:gpsAction];
+    [ac addAction:cancelAction];
+    
+    [[[self chatInputView] textView] resignFirstResponder];
+    [self presentViewController:ac animated:YES completion:nil];
+}
+
 
 
 #pragma mark - UITableViewDataSource
@@ -211,6 +258,7 @@ NSString * const HCChatSentTextMessageTableViewCellIdentifier =@"HCSentTextMessa
         case HCChatEntityTypeTextMessageSent:{
             HCTextMessageTableViewCell *cell = [[self tableView] dequeueReusableCellWithIdentifier:HCChatSentTextMessageTableViewCellIdentifier];
             HCTextMessageEntity *messageEntity = [[self viewModel] itemAtIndexPath:indexPath];
+            [cell setMessageGuid:[messageEntity guid]];
             [[cell messageLabel] setText:[messageEntity text]];
             [[cell bubbleImageView] setImage:[self sentBubbleImage]];
             return cell;
@@ -218,6 +266,7 @@ NSString * const HCChatSentTextMessageTableViewCellIdentifier =@"HCSentTextMessa
         case HCChatEntityTypeTextMessageRecieved:{
             HCTextMessageTableViewCell *cell = [[self tableView] dequeueReusableCellWithIdentifier:HCChatRecievedTextMessageTableViewCellIdentifier];
             HCTextMessageEntity *messageEntity = [[self viewModel] itemAtIndexPath:indexPath];
+            [cell setMessageGuid:[messageEntity guid]];
             [[cell messageLabel] setText:[messageEntity text]];
             [[cell bubbleImageView] setImage:[self receivedBubbleImage]];
             return cell;
@@ -263,5 +312,28 @@ NSString * const HCChatSentTextMessageTableViewCellIdentifier =@"HCSentTextMessa
     [self updateSendButtonState];
 }
 
+#pragma mark - HCSelectMapViewControllerDelegate 
+- (void)selectMapViewController:(HCSelectMapViewController *)mapViewController wantsToCloseWithResult:(NSDictionary *)resultDictionary {
+    
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    });
+}
+
+#pragma mark - HCMessageCellDelegate 
+- (void)messageCellDidTap:(HCBaseMessageTableViewCell *)cell {
+    NSString *messageGuid = [cell messageGuid];
+    
+    if (!messageGuid)
+        return;
+    
+    NSString *reuseIdentifier = [cell reuseIdentifier];
+    
+    if ([reuseIdentifier isEqualToString:HCChatRecievedImageMessageTableViewCellIdentifier] ||
+        [reuseIdentifier isEqualToString:HCChatSentImageMessageTableViewCellIdentifier]) {
+        
+    }
+}
 
 @end

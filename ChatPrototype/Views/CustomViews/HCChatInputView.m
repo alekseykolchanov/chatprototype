@@ -12,6 +12,7 @@
 
 @property (nonatomic, weak) UITextView *textView;
 @property (nonatomic, weak) UIButton *sendButton;
+@property (nonatomic, weak) UIButton *attachButton;
 @property (nonatomic, weak) NSLayoutConstraint *heightConstraint;
 
 @end
@@ -56,8 +57,16 @@
     [self addSubview:sendButton];
     [self setSendButton:sendButton];
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(15)-[textView]-(2)-[sendButton]-(2)-|" options:0 metrics:nil views:@{@"textView" : textView, @"sendButton" : sendButton}]];
+    UIButton *attachButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [attachButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [[attachButton titleLabel] setFont:[UIFont boldSystemFontOfSize:20.0f]];
+    [attachButton setTitle:@"+" forState:UIControlStateNormal];
+    [self addSubview:attachButton];
+    [self setAttachButton:attachButton];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(0)-[attachButton(==44)]-(0)-[textView]-(2)-[sendButton]-(2)-|" options:0 metrics:nil views:@{@"attachButton" : attachButton, @"textView" : textView, @"sendButton" : sendButton}]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(6)-[textView]-(6)-|" options:0 metrics:nil views:@{@"textView" : textView}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[attachButton(==44)]-(0)-|" options:0 metrics:nil views:@{@"attachButton" : attachButton}]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[sendButton(==44)]-(0)-|" options:0 metrics:nil views:@{@"sendButton" : sendButton}]];
 }
 

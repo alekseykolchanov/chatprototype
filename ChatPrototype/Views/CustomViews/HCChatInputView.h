@@ -17,5 +17,6 @@
 
 @property (nonatomic, weak, readonly) UITextView *textView;
 @property (nonatomic, weak, readonly) UIButton *sendButton;
+@property (nonatomic, weak, readonly) UIButton *attachButton;
 
 @end

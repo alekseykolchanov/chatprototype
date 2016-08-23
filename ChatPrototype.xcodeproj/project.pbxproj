@@ -45,6 +45,13 @@
 		59AC2DE81D6A1655002C6521 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AC2DE71D6A1655002C6521 /* Images.xcassets */; };
 		59AC2DEB1D6AAD1B002C6521 /* HCChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC2DEA1D6AAD1B002C6521 /* HCChatInputView.m */; };
 		59AC2DEE1D6AF6E6002C6521 /* HCInverseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC2DED1D6AF6E6002C6521 /* HCInverseTableView.m */; };
+		59B98D811D6C84D4008490F2 /* HCSelectMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B98D801D6C84D4008490F2 /* HCSelectMapViewController.m */; };
+		59B98D841D6C89D2008490F2 /* HCSelectMapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B98D831D6C89D2008490F2 /* HCSelectMapViewModel.m */; };
+		59B98D871D6C8C90008490F2 /* HCImageMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B98D861D6C8C90008490F2 /* HCImageMessageTableViewCell.m */; };
+		59B98D8B1D6C90EE008490F2 /* HCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B98D8A1D6C90EE008490F2 /* HCMapViewController.m */; };
+		59B98D8E1D6C935F008490F2 /* CLLocation+ChatPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B98D8D1D6C935F008490F2 /* CLLocation+ChatPrototype.m */; };
+		59B98D911D6C9CA3008490F2 /* HCMapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B98D901D6C9CA3008490F2 /* HCMapViewModel.m */; };
+		59B98D931D6CABCE008490F2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B98D921D6CABCE008490F2 /* MapKit.framework */; };
 		59F1AF621D670A38009E7FCB /* HCMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF611D670A38009E7FCB /* HCMainViewModel.m */; };
 		59F1AF671D6719A8009E7FCB /* HCUserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF661D6719A8009E7FCB /* HCUserListViewModel.m */; };
 		59F1AF6B1D679767009E7FCB /* NSIndexPath+ChatPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F1AF6A1D679767009E7FCB /* NSIndexPath+ChatPrototype.m */; };
@@ -138,6 +145,19 @@
 		59AC2DEA1D6AAD1B002C6521 /* HCChatInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCChatInputView.m; sourceTree = "<group>"; };
 		59AC2DEC1D6AF6E6002C6521 /* HCInverseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCInverseTableView.h; sourceTree = "<group>"; };
 		59AC2DED1D6AF6E6002C6521 /* HCInverseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCInverseTableView.m; sourceTree = "<group>"; };
+		59B98D7F1D6C84D4008490F2 /* HCSelectMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSelectMapViewController.h; sourceTree = "<group>"; };
+		59B98D801D6C84D4008490F2 /* HCSelectMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSelectMapViewController.m; sourceTree = "<group>"; };
+		59B98D821D6C89D2008490F2 /* HCSelectMapViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSelectMapViewModel.h; sourceTree = "<group>"; };
+		59B98D831D6C89D2008490F2 /* HCSelectMapViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSelectMapViewModel.m; sourceTree = "<group>"; };
+		59B98D851D6C8C90008490F2 /* HCImageMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCImageMessageTableViewCell.h; sourceTree = "<group>"; };
+		59B98D861D6C8C90008490F2 /* HCImageMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCImageMessageTableViewCell.m; sourceTree = "<group>"; };
+		59B98D891D6C90EE008490F2 /* HCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMapViewController.h; sourceTree = "<group>"; };
+		59B98D8A1D6C90EE008490F2 /* HCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMapViewController.m; sourceTree = "<group>"; };
+		59B98D8C1D6C935F008490F2 /* CLLocation+ChatPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+ChatPrototype.h"; sourceTree = "<group>"; };
+		59B98D8D1D6C935F008490F2 /* CLLocation+ChatPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+ChatPrototype.m"; sourceTree = "<group>"; };
+		59B98D8F1D6C9CA3008490F2 /* HCMapViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMapViewModel.h; sourceTree = "<group>"; };
+		59B98D901D6C9CA3008490F2 /* HCMapViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMapViewModel.m; sourceTree = "<group>"; };
+		59B98D921D6CABCE008490F2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		59F1AF5F1D6706C1009E7FCB /* HCServerManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCServerManagerProtocol.h; sourceTree = "<group>"; };
 		59F1AF601D670A38009E7FCB /* HCMainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMainViewModel.h; sourceTree = "<group>"; };
 		59F1AF611D670A38009E7FCB /* HCMainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMainViewModel.m; sourceTree = "<group>"; };
@@ -161,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B98D931D6CABCE008490F2 /* MapKit.framework in Frameworks */,
 				59A1240C1D65AAC900CF2F8B /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +203,8 @@
 				592AFBD21D68C96300DD9B3A /* HCBaseMessageTableViewCell.m */,
 				592AFBD41D68C97F00DD9B3A /* HCTextMessageTableViewCell.h */,
 				592AFBD51D68C97F00DD9B3A /* HCTextMessageTableViewCell.m */,
+				59B98D851D6C8C90008490F2 /* HCImageMessageTableViewCell.h */,
+				59B98D861D6C8C90008490F2 /* HCImageMessageTableViewCell.m */,
 			);
 			name = MessageCells;
 			sourceTree = "<group>";
@@ -189,6 +212,7 @@
 		59A123791D659A5E00CF2F8B = {
 			isa = PBXGroup;
 			children = (
+				59B98D921D6CABCE008490F2 /* MapKit.framework */,
 				59A123E61D65A7B700CF2F8B /* CoreData.framework */,
 				59A123841D659A5F00CF2F8B /* ChatPrototype */,
 				59A1239E1D659A5F00CF2F8B /* ChatPrototypeTests */,
@@ -290,6 +314,7 @@
 				590272731D66E412000C5D1A /* HCUserListViewController.m */,
 				59F1AF6F1D6841AA009E7FCB /* HCChatViewController.h */,
 				59F1AF701D6841AA009E7FCB /* HCChatViewController.m */,
+				59B98D881D6C90C5008490F2 /* MapViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -365,6 +390,10 @@
 				59F1AF661D6719A8009E7FCB /* HCUserListViewModel.m */,
 				59F1AF721D6841C3009E7FCB /* HCChatViewModel.h */,
 				59F1AF731D6841C3009E7FCB /* HCChatViewModel.m */,
+				59B98D8F1D6C9CA3008490F2 /* HCMapViewModel.h */,
+				59B98D901D6C9CA3008490F2 /* HCMapViewModel.m */,
+				59B98D821D6C89D2008490F2 /* HCSelectMapViewModel.h */,
+				59B98D831D6C89D2008490F2 /* HCSelectMapViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -378,6 +407,8 @@
 				59A124201D65D63400CF2F8B /* UITextField+ChatPrototype.m */,
 				59F1AF691D679767009E7FCB /* NSIndexPath+ChatPrototype.h */,
 				59F1AF6A1D679767009E7FCB /* NSIndexPath+ChatPrototype.m */,
+				59B98D8C1D6C935F008490F2 /* CLLocation+ChatPrototype.h */,
+				59B98D8D1D6C935F008490F2 /* CLLocation+ChatPrototype.m */,
 			);
 			path = ClassCategories;
 			sourceTree = "<group>";
@@ -388,6 +419,17 @@
 				59AC2DE71D6A1655002C6521 /* Images.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		59B98D881D6C90C5008490F2 /* MapViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				59B98D891D6C90EE008490F2 /* HCMapViewController.h */,
+				59B98D8A1D6C90EE008490F2 /* HCMapViewController.m */,
+				59B98D7F1D6C84D4008490F2 /* HCSelectMapViewController.h */,
+				59B98D801D6C84D4008490F2 /* HCSelectMapViewController.m */,
+			);
+			name = MapViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +483,11 @@
 					59A123811D659A5E00CF2F8B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KN77JJ2EVX;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					59A1239A1D659A5F00CF2F8B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -499,20 +546,24 @@
 				592AFBD31D68C96300DD9B3A /* HCBaseMessageTableViewCell.m in Sources */,
 				590272741D66E412000C5D1A /* HCUserListViewController.m in Sources */,
 				59A124081D65AA0A00CF2F8B /* Image+CoreDataProperties.m in Sources */,
+				59B98D841D6C89D2008490F2 /* HCSelectMapViewModel.m in Sources */,
 				59A1241B1D65C8CD00CF2F8B /* HCMainViewController.m in Sources */,
 				59A124121D65AC4F00CF2F8B /* HCServerManager.m in Sources */,
+				59B98D8B1D6C90EE008490F2 /* HCMapViewController.m in Sources */,
 				59A123FE1D65A9DF00CF2F8B /* TextMessage+CoreDataProperties.m in Sources */,
 				59A123FC1D65A9DF00CF2F8B /* GeoLocationMessage+CoreDataProperties.m in Sources */,
 				59A123B81D659D4E00CF2F8B /* chatprototype.xcdatamodeld in Sources */,
 				59A1240B1D65AA0A00CF2F8B /* ImageMessage.m in Sources */,
 				59A123E51D65A71B00CF2F8B /* NSDate+ChatPrototype.m in Sources */,
 				59F1AF621D670A38009E7FCB /* HCMainViewModel.m in Sources */,
+				59B98D811D6C84D4008490F2 /* HCSelectMapViewController.m in Sources */,
 				59A1238A1D659A5F00CF2F8B /* AppDelegate.m in Sources */,
 				59A1240A1D65AA0A00CF2F8B /* ImageMessage+CoreDataProperties.m in Sources */,
 				59A123EC1D65A97200CF2F8B /* BaseMessage+CoreDataProperties.m in Sources */,
 				59AC2DE01D69B50E002C6521 /* User+CoreDataProperties.m in Sources */,
 				592AFBD61D68C97F00DD9B3A /* HCTextMessageTableViewCell.m in Sources */,
 				59F1AF6E1D679C26009E7FCB /* HCUserFriendTableViewCell.m in Sources */,
+				59B98D911D6C9CA3008490F2 /* HCMapViewModel.m in Sources */,
 				59A124181D65C8A900CF2F8B /* HCBaseViewController.m in Sources */,
 				59F1AF6B1D679767009E7FCB /* NSIndexPath+ChatPrototype.m in Sources */,
 				59A124091D65AA0A00CF2F8B /* Image.m in Sources */,
@@ -523,6 +574,8 @@
 				59A123871D659A5F00CF2F8B /* main.m in Sources */,
 				59A123ED1D65A97200CF2F8B /* BaseMessage.m in Sources */,
 				592AFBD91D68C9C800DD9B3A /* HCDateTimeTableViewCell.m in Sources */,
+				59B98D871D6C8C90008490F2 /* HCImageMessageTableViewCell.m in Sources */,
+				59B98D8E1D6C935F008490F2 /* CLLocation+ChatPrototype.m in Sources */,
 				59F1AF771D6843EF009E7FCB /* HCModelSupport.m in Sources */,
 				59AC2DEE1D6AF6E6002C6521 /* HCInverseTableView.m in Sources */,
 				59F1AF711D6841AA009E7FCB /* HCChatViewController.m in Sources */,
